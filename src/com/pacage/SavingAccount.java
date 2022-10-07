@@ -20,12 +20,12 @@ public class SavingAccount {
     public String getAccountHolderName() {
         return accountHolderName;
     }
-    public void setAccountNumber(long accountNumber){
+    /*public void setAccountNumber(long accountNumber){
         this.accountNumber = accountNumber;
     }
     public long getAccountNumber(){
         return accountNumber;
-    }
+    }*/
 
     public void setAvailableBalance(double availableBalance) {
         this.availableBalance = availableBalance;
@@ -84,6 +84,10 @@ public class SavingAccount {
     }
     public double getAccountBalance(){
         return availableBalance;
+    }
+    public long accNumberGen(){
+        accountNumber = (long) (Math.random()*1000000000000L);
+        return accountNumber;
     }
     public double deposit(double depositAmount){
         availableBalance=getAvailableBalance()+depositAmount;
